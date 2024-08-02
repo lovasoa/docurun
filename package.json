@@ -1,0 +1,18 @@
+{
+  "name": "docurun",
+  "version": "0.0.1",
+  "description": "Executable website documentation",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ophir Lojkine",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@playwright/test": "^1.45.3",
+    "marked": "^13.0.3",
+    "playwright": "^1.45.3"
+  }
+}

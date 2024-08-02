@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <style>
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background: #fafafa;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+p a {
+    color: #0078d7; /* Base color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease, border-bottom 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    border-bottom: 2px solid transparent; /* Subtle underline effect */
+}
+
+p a:hover, p a:focus {
+    border-bottom: 2px solid #005bb5; /* Underline appears on hover/focus */
+    transform: translateY(-1px); /* Slight lift effect on hover/focus */
+}
+
+p a:active {
+    color: #003d7a; /* Even darker shade when clicked */
+    border-bottom: 2px solid #003d7a; /* Underline color matches text on click */
+    transform: translateY(1px); /* Slight push effect when clicked */
+}
+
+p a:visited {
+    color: #5e188d; /* Color for visited links */
+}
+
+p a:disabled {
+    color: #aaa; /* Disabled link color */
+    pointer-events: none; /* Disable clicking */
+    cursor: not-allowed; /* Cursor changes to indicate disabled state */
+    text-decoration: none; /* No underline for disabled links */
+}
+
+/* Accessibility improvements */
+p a:focus {
+    outline: 3px solid #0078d7; /* Clear focus indicator */
+    outline-offset: 2px; /* Offset to separate from text */
+}
+
+p {
+    margin: 0 0 1.5em; /* Space below paragraphs */
+    line-height: 1.75; /* Improved readability */
+    font-size: 1rem; /* Base font size */
+    letter-spacing: 0.5px; /* Slightly increased letter spacing */
+    color: #444; /* Darker text color for better contrast */
+    text-align: justify; /* Justify text for a clean look */
+    padding: 0 10px; /* Padding for better text alignment */
+    position: relative;
+}
+
+img {
+    max-width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below images */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: .3s;
+    text-align: center;
+}
+
+img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    border-radius: 4px;
+}
+
+img:active {
+    transform: scale(0.98); /* Slight shrink effect when clicked */
+}
+
+body::before {
+    content: '';
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #0078d7, #00c6ff);
+    opacity: 0.05;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+a:focus, button:focus, input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 120, 215, 0.5);
+}
+
+
+header {
+    background: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75em;
+    color: #0078d7;
+    text-align: center;
+    font-weight: 500;
+}
+
+nav {
+    width: 250px;
+    padding: 30px 20px;
+    background: #fff;
+    border-right: 1px solid #e6e9ef;
+    height: 100vh;
+    overflow-y: auto;
+    position: fixed;
+}
+
+nav a {
+    text-transform: capitalize;
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: .3s;
+    font-size: 0.95em;
+    transition: .5s;
+}
+
+nav a.active {
+    background: #e6f0fb;
+    border-color: #0078d7;
+    color: #0078d7;
+}
+
+nav a:hover {
+    background: #e3eaf0;
+}
+
+main {
+    margin: auto;
+    margin-left: calc(200px + 10%);
+    padding: 40px 60px;
+    width: 70rem;
+    max-width: calc(100% - 200px - 10%);
+    border-right: 1px solid #e6e9ef;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 20px 30px;
+    }
+
+    nav {
+        width: 200px;
+        left: -180px;
+        transition: .5s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    main {
+        margin-left: 20px;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    nav::after {
+        content: '>';
+        position: absolute;
+        top: 50%;
+        right: 3px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+        color: #0078d7;
+    }
+
+    nav:hover {
+        left: 0;
+    }
+
+    nav:hover::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+
+
+section {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e9ef;
+}
+
+section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #0078d7;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+pre > code {
+    display: block;
+    padding: 20px;
+    background: #1f2335;
+    color: #def3f0;
+    overflow-x: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    font-size: 0.85em;
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main, nav, footer {
+    animation: fadeIn .5s ease-in-out;
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <!-- menu -->
+</nav>
+
+
+<main>
+<!-- markdown -->
+</main>
+
+</body>
+</html>
