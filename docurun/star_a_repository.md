@@ -53,13 +53,3 @@ await page.getByText('Star', {exact: true}).first().click()
 ```
 
 ![](#screenshot)
-
-
-### Errors
-
-If your test returns an error, you still get a beautifully
-rendered error with a screenshot and a DOM dump to help you debug the issue quickly :
-
-```js
-await page.getByText('inexistent element').click()
-```

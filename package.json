@@ -1,6 +1,6 @@
 {
   "name": "docurun",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Executable website documentation",
   "type": "module",
   "main": "index.js",
@@ -11,6 +11,7 @@
     "start": "node cli.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": "./bin/docurun.js",
   "author": "Ophir Lojkine",
   "license": "BSD-3-Clause",
   "dependencies": {

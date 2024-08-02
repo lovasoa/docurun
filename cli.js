@@ -1,11 +1,8 @@
-import { process_file, test_file } from './index.js';
-import { readFile, writeFile, readdir, stat, mkdir } from 'fs/promises';
-import { join, basename, extname } from 'path';
+import { process_file } from './index.js';
+import { readFile, writeFile, readdir, mkdir } from 'fs/promises';
+import { join, basename } from 'path';
 
 import { chromium } from 'playwright';
-
-let source_folder = './docurun/';
-let destinatination_folder = './docurun/website/';
 
 export async function makeContext(browser) {
     return {
@@ -75,6 +72,3 @@ export async function run_in_folder(source_folder, destinatination_folder) {
     await Promise.all(input_files)
     browser.close();
 }
-
-
-run_in_folder(source_folder, destinatination_folder)
