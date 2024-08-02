@@ -4,6 +4,9 @@
   "description": "Executable website documentation",
   "type": "module",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/lovasoa/docurun"
+  },
   "scripts": {
     "start": "node cli.js",
     "test": "echo \"Error: no test specified\" && exit 1"
