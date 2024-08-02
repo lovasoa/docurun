@@ -62,3 +62,33 @@ It produces a beautiful documentation website with screenshots taken during the 
 ### Github stars
 ![gh_star_md](screenshots/starImage.png)
 ![gh_star_render](screenshots/starRenderImage.png)
+
+### Errors
+
+An error run looks like this in the terminal
+
+```
+$ npx docurun
+
+> docurun@0.0.1 start
+> node cli.js
+
+Processing all files in ./docurun/:
+ - download_sqlpage.md
+ - star_a_repository.md.
+Saving results to ./docurun/website/.
+
+✅ download_sqlpage
+Error while executing code:
+await page.getByText('inexistent element').click()
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for getByText('inexistent element')
+
+❌ star_a_repository
+```
+
+And rendered:
+
+![error](screenshots/error.png)
