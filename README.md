@@ -29,9 +29,9 @@ It produces a beautiful documentation website with screenshots taken during the 
 
     Open your browser and navigate to repository page
 
-    \`\`\`js
+    ```js
     await page.goto('https://github.com/lovasoa/sqlpage')
-    \`\`\`
+    ``
 
     You should now see a page like this:
 
@@ -39,9 +39,9 @@ It produces a beautiful documentation website with screenshots taken during the 
 
     Click on the "Star" button
 
-    \`\`\`js
+    ```js
     await page.click('button[aria-label="Star this repository"]')
-    \`\`\`
+    ``
     ```
 2. Run DocuRun on your markdown files
     ```bash
@@ -54,4 +54,11 @@ It produces a beautiful documentation website with screenshots taken during the 
 
 ## Screenshots
 
-| Markdown | Result 
+### SQLPage
+
+![sqlpage.md](screenshots/sqlpage-md.png)
+![sqlpage docs](screenshots/sqlpageRendered.png)
+
+### Github stars
+![gh_star_md](screenshots/starImage.png)
+![gh_star_render](screenshots/starRenderImage.png)
