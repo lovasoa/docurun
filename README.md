@@ -4,7 +4,7 @@ DocuRun is a tool to run your documentation as integration tests.
 
 ## Why ?
 
-I bet both your **integration tests** and your **documentation** are disappointing.
+I bet both your **integration tests** and your **documentation** are both disappointing.
 
  - Your integration tests are probably hard to write, hard to read, and hard to debug.
    When something goes wrong, you have to dig through the code and try to guess at which point they differ from what you are doing manually in your browser.
@@ -21,28 +21,7 @@ It produces a beautiful documentation website with screenshots taken during the 
 ## How to use DocuRun
 
 1. Write your documentation in markdown files, including code blocks that describe how to use your application.
-   Create a `docurun/index.md` file with the following content: 
-   ```markdown
-    # How to give a star to a repository on GitHub
-
-    ## Finding the repository
-
-    Open your browser and navigate to repository page
-
-    ```js
-    await page.goto('https://github.com/lovasoa/sqlpage')
-    ``
-
-    You should now see a page like this:
-
-    ![](#screenshot)
-
-    Click on the "Star" button
-
-    ```js
-    await page.click('button[aria-label="Star this repository"]')
-    ``
-    ```
+   Create a [`docurun/index.md`](./docurun/download_sqlpage.md) file that looks like this: ![sqlpage.md](screenshots/sqlpage-md.png)
 2. Run DocuRun on your markdown files
     ```bash
     npx docurun
