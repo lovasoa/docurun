@@ -35,6 +35,8 @@ It produces a beautiful documentation website with screenshots taken during the 
 
 ### SQLPage
 
+This shows the executable documentation of the [SQLPage](https://sql.ophir.dev/) website building tool.
+
 ![sqlpage.md](screenshots/sqlpage-md.png)
 ![sqlpage docs](screenshots/sqlpageRendered.png)
 
