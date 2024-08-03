@@ -1,5 +1,7 @@
 # DocuRun
 
+<center> <img src="https://github.com/user-attachments/assets/c1792d88-5705-4780-b8df-c7e17d6116ef"> </center>
+
 DocuRun is a tool to run your documentation as integration tests.
 
 ## Why ?
@@ -44,6 +46,8 @@ See [lovaoa/docurun](https://hub.docker.com/r/lovasoa/docurun) on Docker Hub.
 ## Screenshots
 
 ### SQLPage
+
+This shows the executable documentation of the [SQLPage](https://sql.ophir.dev/) website building tool.
 
 ![sqlpage.md](screenshots/sqlpage-md.png)
 ![sqlpage docs](screenshots/sqlpageRendered.png)
