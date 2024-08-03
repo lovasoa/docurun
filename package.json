@@ -1,6 +1,6 @@
 {
   "name": "docurun",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Executable website documentation",
   "type": "module",
   "main": "index.js",
