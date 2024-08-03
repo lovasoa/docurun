@@ -30,7 +30,7 @@ export async function makeContext(browser) {
  * @param {string} options.input_file - The path to the input file.
  * @param {string} options.destinatination_folder - The path to the destination folder.
  * @param {string} options.template - The html template to use.
- * @returns {Promise<void>} - A promise that resolves when the process is complete.
+ * @returns {Promise<Context>} - A promise that resolves when the process is complete.
  */
 export async function run_on_file({ browser, input_file, destinatination_folder, template }) {
     const name = basename(input_file, '.md');
@@ -39,7 +39,8 @@ export async function run_on_file({ browser, input_file, destinatination_folder,
     const html = await process_file(markdown_source, template, ctx);
     const outfile_path = join(destinatination_folder, name + '.html');
     await writeFile(outfile_path, html);
-    console.log(`${ctx.success ? '\u2705' : '\u274c'} ${name}`)
+    console.log(`${ctx.success ? '\u2705' : '\u274c'} ${name}`);
+    return ctx;
 }
 
 /**
@@ -57,8 +58,13 @@ export async function run_in_folder(source_folder, destinatination_folder) {
     const browser = await chromium.launch();
     const template_base = await readFile(`${import.meta.dirname}/template.html`, 'utf-8');
 
-    await mkdir(destinatination_folder).catch(() => 0);
+    await mkdir(destinatination_folder, {recursive: true}).catch(() => 0);
     const all_files = (await readdir(source_folder)).filter(f => f.endsWith('.md'));
+    
+    if (all_files.length === 0) {
+        console.log(`No markdown files found in ${source_folder}.`);
+        process.exit(1);
+    }
 
     console.log(`Processing all files in ${source_folder}:\n - ${all_files.join('\n - ')}.\nSaving results to ${destinatination_folder}.\n`);
 
@@ -69,6 +75,11 @@ export async function run_in_folder(source_folder, destinatination_folder) {
             destinatination_folder,
             template: template_base.replace('<!-- menu -->', make_menu(all_files, file))
         }));
-    await Promise.all(input_files)
+
+    const all = await Promise.all(input_files);
     browser.close();
+
+    if (all.some(ctx => !ctx.success)) {
+        process.exit(1);
+    }
 }
