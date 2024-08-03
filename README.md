@@ -31,6 +31,16 @@ It produces a beautiful documentation website with screenshots taken during the 
    It will also create a `docurun/website/` directory containing a static website with your documentation and screenshots.
    If some tests failed, the documentation will contain the screenshots of the page at the time of the failure, and the error message.
 
+### Docker
+
+You can also run DocuRun in a docker container, without having to install node.js on your machin:
+
+```bash
+docker run -v $(pwd)/docurun:/docurun -it lovasoa/docurun
+```
+
+See [lovaoa/docurun](https://hub.docker.com/r/lovasoa/docurun) on Docker Hub.
+
 ## Screenshots
 
 ### SQLPage
