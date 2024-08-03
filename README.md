@@ -1,5 +1,7 @@
 # DocuRun
 
+<center> <img src="https://github.com/user-attachments/assets/c1792d88-5705-4780-b8df-c7e17d6116ef"> </center>
+
 DocuRun is a tool to run your documentation as integration tests.
 
 ## Why ?
