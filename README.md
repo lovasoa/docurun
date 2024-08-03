@@ -6,7 +6,7 @@ DocuRun is a tool to run your documentation as integration tests.
 
 ## Why ?
 
-I bet both your **integration tests** and your **documentation** are both disappointing.
+I bet both your **integration tests** and your **documentation** are disappointing.
 
  - Your integration tests are probably hard to write, hard to read, and hard to debug.
    When something goes wrong, you have to dig through the code and try to guess at which point they differ from what you are doing manually in your browser.
