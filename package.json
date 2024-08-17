@@ -1,6 +1,6 @@
 {
   "name": "docurun",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Executable website documentation",
   "type": "module",
   "main": "index.js",
@@ -16,7 +16,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "@playwright/test": "^1.45.3",
-    "marked": "^13.0.3",
+    "marked": "^14.0.0",
     "playwright": "^1.45.3"
   }
 }
